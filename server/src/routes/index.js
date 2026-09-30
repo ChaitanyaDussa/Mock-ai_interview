@@ -8,4 +8,11 @@ router.use('/auth', authRoutes);
 router.use('/resume', resumeRoutes);
 router.use('/interview', interviewRoutes);
 router.use('/history', historyRoutes);
+
+router.get('/health', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Server is healthy',
+  });
+});
 export default router;
